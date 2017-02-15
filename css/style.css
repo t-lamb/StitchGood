@@ -1,6 +1,7 @@
 body {
     font-family: 'Cabin', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
+    background-color: #f0f0f2;
 }
 .bgimage {
     background-image: url(../imgs/scarves.jpg);
@@ -12,29 +13,28 @@ body {
     color: #ffffff;
     padding: 10% 0;
 }
-.logo img {
-    width: 100%;
-}
 .intro {
     font-size: 1.5rem;
-    margin: 2rem auto 3rem auto;
-    line-height: 1.3;
+    margin: 2rem auto 0 auto;
 }
 .intro-title {
     font-weight: 700;
 }
-.bbox {
-    border: 1px solid black;
-    background-color: grey;
-    height: 300px;
-    width: 100%;
-}
 .card-img-top {
-    width: 100%;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
 }
 .card {
     margin: 1rem 0;
-    border-radius: 0; 
+    border-radius: 0;
+    border: none;
+}
+.cause-cards {
+    padding: 2rem;
+}
+.location {
+    color: #aaa;
+}
+.loc-svg {
+    padding: 0 .1rem .2rem 0;
 }
