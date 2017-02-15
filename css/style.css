@@ -38,3 +38,26 @@ body {
 .loc-svg {
     padding: 0 .1rem .2rem 0;
 }
+.nav a {
+    position: relative;
+    display: block;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    color: #000;
+}
+.nav a:hover, .nav .active {
+    border-bottom: 3px solid #000;
+}
+.header-nav {
+    float: right;
+}
+.header-nav a{
+    color: #fff;
+}
+.header-nav a:hover{
+    border-bottom: 3px solid #fff;
+}
+
+.sg-logo {
+    padding: 1rem 0;
+}
