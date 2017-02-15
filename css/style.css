@@ -3,9 +3,9 @@ body {
     font-size: 16px;
     background-color: #f0f0f2;
 }
-/*---HEADER---*/
+/*--- HEADER ---*/
 .bgimage {
-    background-image: url(../imgs/scarves.jpg);
+    background-image: url(../imgs/scarves1.jpg);
     background-position: center center;;
     background-size: cover;
     height: auto;
@@ -33,9 +33,11 @@ body {
     background-color: #fff;
     border-radius: .1rem;
     padding: .75rem 2rem;
+    margin: 0 auto 2rem auto;
+    cursor: pointer;
 }
 
-/*---CARDS--*/
+/*--- CARDS ---*/
 .card-nav a {
     position: relative;
     display: block;
@@ -63,4 +65,9 @@ body {
 }
 .loc-svg {
     padding: 0 .1rem .2rem 0;
+}
+@media (min-width: 768px) {
+    .intro {
+        margin: -4rem 0 0 0;
+    }
 }
