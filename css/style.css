@@ -1,8 +1,12 @@
+/*--Colors--*/
+/* bccbde */
 body {
     font-family: 'Cabin', sans-serif;
     font-size: 16px;
-    background-color: #f0f0f2;
+    background-color: #F0F0F2;
+    color: #373F47;
 }
+
 /*--- HEADER ---*/
 .bgimage {
     background-image: url(../imgs/scarves1.jpg);
@@ -30,15 +34,24 @@ body {
 .lead {
     font-size: 1.75rem;
 }
-.join-btn {
-    font-family: 'Cabin', sans-serif;
+.btn {
     font-weight: 700;
-    color: #444;
-    background-color: #fff;
+    cursor: pointer;
+    font-family: 'Cabin', sans-serif;
     border-radius: .1rem;
     padding: .75rem 2rem;
+    border: none;
+}
+.join-btn {
+    color: #2E5EAA;
+    background-color: #fff;
     margin: 0 auto 2rem auto;
-    cursor: pointer;
+}
+.join-btn:hover {
+    color: #fff;
+    background-color: #2E5EAA;
+    margin: 0 auto 2rem auto;
+    transition: all 0.3s ease 0s;
 }
 
 /*--- CARDS ---*/
@@ -47,10 +60,14 @@ body {
     display: block;
     margin: 0.5rem 1rem;
     padding: 0.5rem 0;
-    color: #444;
+    color: #373F47;
 }
-.card-nav a:hover, .nav .active {
-    border-bottom: 3px solid #444;
+.card-nav a:hover {
+    color: #2E5EAA;
+    border-bottom: 3px solid #2E5EAA;
+}
+.active {
+    border-bottom: 3px solid #373F47;
 }
 .card-img-top {
     border-top-right-radius: .1rem;
@@ -64,8 +81,11 @@ body {
 .cause-cards {
     padding: 2rem;
 }
+.card-title a {
+    color: #2E5EAA;
+}
 .location {
-    color: #aaa;
+    color: #AAABBC;
 }
 .loc-svg {
     padding: 0 .1rem .2rem 0;
@@ -74,4 +94,34 @@ body {
     .intro {
         margin: -4rem 0 0 0;
     }
+}
+
+/*--- MODAL ---*/
+.modal-content {
+    border-radius: .1rem;
+    color: #373F47;
+    padding: 0 1rem;
+}
+.modal-header {
+    color: #2E5EAA;
+}
+.form-control {
+    font-family: 'Cabin', sans-serif;
+    border-radius: .1rem;
+}
+.form-label {
+    color: #2E5EAA;
+}
+.modal .btn-primary {
+    background-color: #2E5EAA;
+}
+.modal .btn-primary:hover {
+    background-color: #538EED;
+}
+.modal .btn-link {
+    color: #AAABBC;
+    font-weight: 400;
+}
+.modal .btn-link:hover {
+    color: #F64740;
 }
