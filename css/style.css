@@ -13,7 +13,7 @@ body {
     height: auto;
 }
 .sg-logo {
-    padding: 1rem 0;
+    padding: 1rem 1rem;
 }
 .header-nav {
     float: right;
@@ -28,9 +28,10 @@ body {
 }
 .intro {
     color: #fff;
+    margin: 0 2rem;
 }
 .lead {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 .btn {
     font-weight: 700;
@@ -50,6 +51,19 @@ body {
     background-color: #2E5EAA;
     margin: 0 auto 2rem auto;
     transition: all 0.3s ease 0s;
+}
+@media (min-width: 768px) {
+    .intro {
+        margin: -5rem 0 0 0;
+    }
+    .lead {
+        font-size: 2rem;
+    }
+}
+@media (min-width: 992px) {
+    .intro {
+        margin: -6rem 0 0 0;
+    }
 }
 
 /*--- CARDS ---*/
@@ -88,11 +102,6 @@ body {
 .loc-svg {
     padding: 0 .1rem .2rem 0;
 }
-@media (min-width: 768px) {
-    .intro {
-        margin: -4rem 0 0 0;
-    }
-}
 
 /*--- MODAL ---*/
 .modal-content {
@@ -122,4 +131,8 @@ body {
 }
 .modal .btn-link:hover {
     color: #F64740;
+}
+.social {
+    width: 2rem;
+    margin: 0 .75rem 0 0;
 }
