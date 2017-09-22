@@ -67,14 +67,15 @@ body {
 }
 
 /*--- CARDS ---*/
-.card-nav a {
+.card-nav .nav-link {
     position: relative;
     display: block;
     margin: 0.5rem 1rem;
     padding: 0.5rem 0;
     color: #373F47;
+    cursor: pointer;
 }
-.card-nav a:hover {
+.card-nav .nav-link:hover {
     color: #2E5EAA;
     border-bottom: 3px solid #2E5EAA;
 }

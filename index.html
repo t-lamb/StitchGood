@@ -150,9 +150,9 @@
         <div class="cause-cards container-fluid">
             <div class="row">
                 <nav class="nav card-nav">
-                    <a class="nav-link nav-link-featured active" href="#">Featured</a>
-                    <a class="nav-link nav-link-cause" href="#">By Cause</a>
-                    <a class="nav-link nav-link-craft" href="#">By Craft</a>
+                    <a class="nav-link nav-link-featured active">Featured</a>
+                    <a class="nav-link nav-link-cause">By Cause</a>
+                    <a class="nav-link nav-link-craft">By Craft</a>
                 </nav>
             </div><!--/row-->
 
@@ -495,23 +495,28 @@
 </html>
 
 <script>
- $(".nav-link").click(function(){
-   $(this).addClass("active");
-   $(".nav-link:not(this)").removeClass("active");
+$( document ).ready(function() {
+    $(".by-craft").hide();
+    $(".by-cause").hide();
+    
+    $(".nav-link").click(function(){
+       $(".nav-link:not(this)").removeClass("active");
+       $(this).addClass("active");
 
-   if ($(this).hasClass("nav-link-featured")) {
-       $(".featured").show();
-       $(".by-craft").hide();
-       $(".by-cause").hide();
-   } else if ($(this).hasClass("nav-link-craft"))  {
-      $(".by-craft").show();
-      $(".featured").hide();
-      $(".by-cause").hide();
-   } else {
-      $(".by-cause").show();
-      $(".featured").hide();
-      $(".by-craft").hide();
-   }
+       if ($(this).hasClass("nav-link-featured")) {
+           $(".featured").show();
+           $(".by-craft").hide();
+           $(".by-cause").hide();
+       } else if ($(this).hasClass("nav-link-craft"))  {
+          $(".by-craft").show();
+          $(".featured").hide();
+          $(".by-cause").hide();
+       } else {
+          $(".by-cause").show();
+          $(".featured").hide();
+          $(".by-craft").hide();
+       }
+    });
  });
 
 </script>
