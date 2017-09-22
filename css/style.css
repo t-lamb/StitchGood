@@ -93,7 +93,7 @@ body {
 .cause-cards {
     padding: 2rem;
 }
-.card-title a {
+.card-title h4 a {
     color: #2E5EAA;
 }
 .location {
@@ -101,6 +101,19 @@ body {
 }
 .loc-svg {
     padding: 0 .1rem .2rem 0;
+}
+.by-cause h4 {
+    margin-bottom: 0;
+}
+.by-craft .card-title, .by-cause .card-title {
+    text-align: center;
+}
+.by-craft .card-block {
+    text-align: center;
+}
+.card-icon {
+    width: 6rem;
+    margin: 0 auto 1rem;
 }
 
 /*--- MODAL ---*/
