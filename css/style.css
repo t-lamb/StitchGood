@@ -12,6 +12,10 @@ body {
     background-size: cover;
     height: auto;
 }
+.bgimage-about {
+    background-image: url(../imgs/crafts1.jpg);
+    height: 100%;
+}
 .sg-logo {
     padding: 1rem 1rem;
 }
@@ -29,6 +33,11 @@ body {
 .intro {
     color: #fff;
     margin: 0 2rem;
+}
+.about {
+    background-color: #fff;
+    margin: 0 2rem;
+    padding: 2rem;
 }
 .lead {
     font-size: 1.5rem;
@@ -63,6 +72,9 @@ body {
 @media (min-width: 992px) { /*medium and up*/
     .intro {
         margin: -6rem 0 2rem 0;
+    }
+    .about {
+        margin: -5rem 0 0 0;
     }
 }
 
