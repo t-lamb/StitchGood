@@ -70,7 +70,7 @@ body {
 .card-nav .nav-link {
     position: relative;
     display: block;
-    margin: 0.5rem 1rem;
+    margin: 0 1rem 0.5rem;
     padding: 0.5rem 0;
     color: #373F47;
     cursor: pointer;
@@ -82,12 +82,20 @@ body {
 .active {
     border-bottom: 3px solid #373F47;
 }
+.card-columns {
+  /*@include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }*/
+}
 .card-img-top {
     border-top-right-radius: .1rem;
     border-top-left-radius: .1rem;
 }
 .card {
-    margin: 1rem 0;
+    margin: 2rem 0 0;
     border-radius: .1rem;
     border: none;
 }
@@ -149,4 +157,10 @@ body {
 .social {
     width: 2rem;
     margin: 0 .75rem 0 0;
+}
+
+/*--- FOOTER ---*/
+.footer {
+  text-align: center;
+  margin-top: 2rem;
 }

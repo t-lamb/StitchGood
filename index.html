@@ -151,8 +151,8 @@
             <div class="row">
                 <nav class="nav card-nav">
                     <a class="nav-link nav-link-featured active">Featured</a>
-                    <a class="nav-link nav-link-cause">By Cause</a>
                     <a class="nav-link nav-link-craft">By Craft</a>
+                    <a class="nav-link nav-link-cause">By Cause</a>
                 </nav>
             </div><!--/row-->
 
@@ -175,9 +175,6 @@
                             </p>
                         </div><!--/card-block-->
                     </div><!--/card-->
-                </div><!--/column-->
-
-                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <img class="card-img-top img-fluid" src="imgs/knit-your-bit.jpg" alt="Card image cap">
                         <div class="card-block">
@@ -211,8 +208,6 @@
                             </p>
                         </div><!--/card-block-->
                     </div><!--/card-->
-                </div><!--/column-->
-                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <img class="card-img-top img-fluid" src="imgs/knit-for-peace.jpg" alt="Card image cap">
                         <div class="card-block">
@@ -231,6 +226,7 @@
                         </div><!--/card-block-->
                     </div><!--/card-->
                 </div><!--/column-->
+
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <img class="card-img-top img-fluid" src="imgs/warm-up-america.jpg" alt="Card image cap">
@@ -248,8 +244,6 @@
                             </p>
                         </div><!--/card-block-->
                     </div><!--/card-->
-                </div><!--/column-->
-                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <img class="card-img-top img-fluid" src="imgs/project-linus.jpg" alt="Card image cap">
                         <div class="card-block">
@@ -267,6 +261,7 @@
                         </div><!--/card-block-->
                     </div><!--/card-->
                 </div><!--/column-->
+
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <img class="card-img-top img-fluid" src="imgs/knots-of-love.jpg" alt="Card image cap">
@@ -284,8 +279,6 @@
                             </p>
                         </div><!--/card-block-->
                     </div><!--/card-->
-                </div><!--/column-->
-                <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <img class="card-img-top img-fluid" src="imgs/dulaan.jpg" alt="Card image cap">
                         <div class="card-block">
@@ -309,7 +302,7 @@
                 </div><!--/column-->
             </div><!--/row-->
 
-            <div class="row by-craft">
+            <div class="row by-craft justify-content-center">
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <a href="#" class="card-block">
@@ -372,7 +365,7 @@
                 </div><!--/column-->
             </div><!--/row-->
 
-            <div class="row by-cause">
+            <div class="row by-cause justify-content-center">
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card">
                         <a href="#" class="card-block">
@@ -482,6 +475,11 @@
                     </div><!--/card-->
                 </div><!--/column-->
             </div><!--/row-->
+            <div class="row center footer">
+              <div class="col-sm-12">
+                <a href="http://teresaflourlamb.com/">A project by Teresa Lamb</a>
+              </div><!--/column-->
+            </div><!--/row-->
         </div><!--/containter-->
 
 
@@ -498,7 +496,7 @@
 $( document ).ready(function() {
     $(".by-craft").hide();
     $(".by-cause").hide();
-    
+
     $(".nav-link").click(function(){
        $(".nav-link:not(this)").removeClass("active");
        $(this).addClass("active");
