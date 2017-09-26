@@ -14,7 +14,8 @@ body {
 }
 .bgimage-about {
     background-image: url(../imgs/crafts1.jpg);
-    height: 100%;
+    background-attachment: fixed;
+    padding-bottom: 2rem;
 }
 .sg-logo {
     padding: 1rem 1rem;
@@ -36,8 +37,15 @@ body {
 }
 .about {
     background-color: #fff;
-    margin: 0 2rem;
     padding: 2rem;
+    border-radius: 2px;
+}
+.about h2 {
+    margin-bottom: 1.5rem;
+}
+.about h3 {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
 }
 .lead {
     font-size: 1.5rem;
@@ -46,7 +54,7 @@ body {
     font-weight: 700;
     cursor: pointer;
     font-family: 'Cabin', sans-serif;
-    border-radius: .1rem;
+    border-radius: 2px;
     padding: .75rem 2rem;
     border: none;
 }
@@ -61,6 +69,10 @@ body {
     margin: 0 auto 2rem auto;
     transition: all 0.3s ease 0s;
 }
+.about .join-btn {
+    background-color: #eee;
+    margin: 1rem 0 1rem;
+}
 @media (min-width: 768px) { /*small and up*/
     .intro {
         margin: -5rem 0 0 0;
@@ -68,13 +80,16 @@ body {
     .lead {
         font-size: 2rem;
     }
+    .about {
+      font-size: 20px;
+    }
 }
 @media (min-width: 992px) { /*medium and up*/
-    .intro {
+    .intro{
         margin: -6rem 0 2rem 0;
     }
     .about {
-        margin: -5rem 0 0 0;
+      margin: -6rem 0 0 0;
     }
 }
 
@@ -108,7 +123,7 @@ body {
 }
 .card {
     margin: 2rem 0 0;
-    border-radius: .1rem;
+    border-radius: 2px;
     border: none;
 }
 .cause-cards {
@@ -139,7 +154,7 @@ body {
 
 /*--- MODAL ---*/
 .modal-content {
-    border-radius: .1rem;
+    border-radius: 2px;
     color: #373F47;
     padding: 0 1rem;
 }
@@ -148,7 +163,7 @@ body {
 }
 .form-control {
     font-family: 'Cabin', sans-serif;
-    border-radius: .1rem;
+    border-radius: 2px;
 }
 .form-label {
     color: #2E5EAA;
