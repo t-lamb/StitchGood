@@ -1,4 +1,4 @@
-<DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -6,8 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE-edge">
         <!-- Viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Minified Bootstrap CSS from CDN -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <!-- Bootstrap and Vue CSS -->
+        <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css"/>
         <!-- My CSS -->
         <link rel="stylesheet" href="css/style.css">
         <!-- Fonts -->
@@ -150,7 +151,7 @@
                 </div><!--/modal-->
 <!-- Cause Card Container -->
     <!-- Nav 2 -->
-        <div class="cause-cards container-fluid">
+        <div id="app" class="cause-cards container-fluid">
             <div class="row">
                 <nav class="nav card-nav">
                     <a class="nav-link nav-link-featured active">Featured</a>
@@ -162,145 +163,18 @@
     <!-- Cards -->
             <div class="row featured">
                 <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="imgs/bettersea1.jpg" alt="Card image cap">
-                        <div class="card-block">
+                    <div v-for="project in projects" class="card">
+                        <img class="card-img-top img-fluid" :src="project.image" alt="">
+                        <div class="card-body">
                             <h4 class="card-title">
-                                <a href="#">
-                                    Battersea Dogs &amp; Cats Home
-                                </a>
+                                <a href="{{ project.url }}">{{ project.projectName }}</a>
                             </h4>
-                            <p class="card-text">
-                                We take care of over 8,000 dogs and cats every year. There are lots of things our dogs and cats can use, so we're always on the lookout for donations.
-                            </p>
-                            <p class="location">
-                                <img class="loc-svg" src="imgs/location.svg" alt="location icon"> London, England
-                            </p>
-                        </div><!--/card-block-->
-                    </div><!--/card-->
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="imgs/knit-your-bit.jpg" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Knit Your Bit
-                                </a>
-                            </h4>
-                            <p class="card-text">Knit Your Bit is a program put on by the National World War II Museum in New Orleans to provide hand-knit scarves to veterans of World War II through veterans' hospitals and other organizations.</p>
-                            <p class="location">
-                                <img class="loc-svg" src="imgs/location.svg" alt="location icon"> New Orleans, Louisiana, United States
-                            </p>
-                        </div><!--/card-block-->
-                    </div><!--/card-->
-                </div><!--/column-->
-
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="imgs/knit-a-square.jpg" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Knit a Square
-                                </a>
-                            </h4>
-                            <p class="card-text">
-                                Do you love crocheting and knitting for charity? Make and send 8 inch x 8inch(20cm) squares and help keep a cold orphan warm.
-                            </p>
-                            <p class="location">
-                                <img class="loc-svg" src="imgs/location.svg" alt="location icon"> Bryanston, South Africa
-                            </p>
-                        </div><!--/card-block-->
-                    </div><!--/card-->
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="imgs/knit-for-peace.jpg" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Knit for Peace
-                                </a>
-                            </h4>
-                            <p class="card-text">
-                                We now distribute regularly to over 100 outlets, including hospitals, women’s refuges, refugee drop in centres, prisons, community groups, and hospices as well as to developing countries.
-                            </p>
+                            <p class="card-text">{{ project.description }}</p>
                             <p class="location">
                                 <img class="loc-svg" src="imgs/location.svg" alt="location icon">
-                                London, England
+                                {{ project.city }} {{ project.state }} {{ project.country }}
                             </p>
-                        </div><!--/card-block-->
-                    </div><!--/card-->
-                </div><!--/column-->
-
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="imgs/warm-up-america.jpg" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">
-                                <a href="http://www.warmupamerica.org/">
-                                    Warm Up America!
-                                </a>
-                            </h4>
-                            <p class="card-text">
-                                Today Warm Up America distributes warm afghans, caps and other items to tens of thousands of people, thanks to the generosity of knitters and crocheters around the country.
-                            </p>
-                            <p class="location">
-                                <img class="loc-svg" src="imgs/location.svg" alt="location icon"> Carrollton, Texas, United States
-                            </p>
-                        </div><!--/card-block-->
-                    </div><!--/card-->
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="imgs/project-linus.jpg" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Project Linus
-                                </a>
-                            </h4>
-                            <p class="card-text">
-                                We provide homemade blankets to children in need.
-                            </p>
-                            <p class="location">
-                                <img class="loc-svg" src="imgs/location.svg" alt="location icon"> Belton, Missouri, United States
-                            </p>
-                        </div><!--/card-block-->
-                    </div><!--/card-->
-                </div><!--/column-->
-
-                <div class="col-sm-6 col-md-4 col-lg-3">
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="imgs/knots-of-love.jpg" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Knots of Love Chemo Caps
-                                </a>
-                            </h4>
-                            <p class="card-text">
-                                Our mission is to warm the hearts &amp; heads of every patient who loses their hair due to chemo!
-                            </p>
-                            <p class="location">
-                                <img class="loc-svg" src="imgs/location.svg" alt="location icon"> Costa Mesa, California, United States
-                            </p>
-                        </div><!--/card-block-->
-                    </div><!--/card-->
-                    <div class="card">
-                        <img class="card-img-top img-fluid" src="imgs/dulaan.jpg" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">
-                                <a href="#">
-                                    Dulaan Project
-                                </a>
-                            </h4>
-                            <p class="card-text">
-                                Dulaan is the Mongolian word for warm. Warm, well-made clothing can allow a child to go to school or an adult to go to work; restore a sense of dignity; and, in some cases, literally save a life.
-                            </p>
-                            <p class="location">
-                                <img class="loc-svg" src="imgs/location.svg" alt="location icon"> Ulaanbaatar, Mongoloia
-                            </p>
-                        </div><!--/card-block-->
-                        <!--<div class="card-footer">
-                            <a href="#" class="card-link">disaster relief</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>--><!--/card-block-->
+                        </div><!--/card-body-->
                     </div><!--/card-->
                 </div><!--/column-->
             </div><!--/row-->
@@ -480,22 +354,20 @@
             </div><!--/row-->
             <div class="row center footer">
               <div class="col-sm-12">
-                <a href="http://teresaflourlamb.com/">A project by Teresa Lamb</a>
+                <a href="http://ezralamb.com/">A project by Ezra Lamb</a>
               </div><!--/column-->
             </div><!--/row-->
         </div><!--/containter-->
 
-
-    <!-- JQuery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <!-- Tether -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <!-- Minified Bootstrap JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+        <script src="https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+        <!-- My js -->
+        <script src="main.js"></script>
     </body>
 </html>
 
-<script>
+<!--<script>
 $( document ).ready(function() {
     $(".by-craft").hide();
     $(".by-cause").hide();
@@ -520,4 +392,4 @@ $( document ).ready(function() {
     });
  });
 
-</script>
+</script>-->

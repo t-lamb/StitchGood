@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- IE Edge Compatible -->
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <!-- Viewport -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Minified Bootstrap CSS from CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon" />
+
+        <title>Stitch Good</title>
+    </head>
+    <body>
+        <div id="app" class="cause-cards container-fluid">
+        <!-- Cards -->
+            <div class="row featured">
+                <div class="col-sm-6 col-md-4 col-lg-3">
+                    <div v-for="project in projects" class="card">
+                      <img class="card-img-top img-fluid" :src="project.image" alt="">
+                        <div class="card-block">
+                            <h4 class="card-title">
+                                <a href="{{ project.url }}">{{ project.projectName }}</a>
+                            </h4>
+                            <p class="card-text">{{ project.description }}</p>
+                            <p class="location">
+                                <img class="loc-svg" src="imgs/location.svg" alt="location icon">
+                                {{ project.city }} {{ project.state }} {{ project.country }}
+                            </p>
+                        </div><!--/card-block-->
+                    </div><!--/card-->
+                </div><!--/column-->
+            </div><!--/row-->
+
+            <div class="row center footer">
+              <div class="col-sm-12">
+                <a href="http://ezralamb.com/">A project by Ezra Lamb</a>
+              </div><!--/column-->
+            </div><!--/row-->
+        </div><!--/containter-->
+
+        <!-- Vue -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <!-- My js -->
+        <script src="main.js"></script>
+
+    </body>
+</html>
+
+<script>
+$( document ).ready(function() {
+    $(".by-craft").hide();
+    $(".by-cause").hide();
+
+    $(".nav-link").click(function(){
+       $(".nav-link:not(this)").removeClass("active");
+       $(this).addClass("active");
+
+       if ($(this).hasClass("nav-link-featured")) {
+           $(".featured").show();
+           $(".by-craft").hide();
+           $(".by-cause").hide();
+       } else if ($(this).hasClass("nav-link-craft"))  {
+          $(".by-craft").show();
+          $(".featured").hide();
+          $(".by-cause").hide();
+       } else {
+          $(".by-cause").show();
+          $(".featured").hide();
+          $(".by-craft").hide();
+       }
+    });
+ });
+
+</script>

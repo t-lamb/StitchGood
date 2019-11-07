@@ -134,6 +134,7 @@ body {
 }
 .location {
     color: #AAABBC;
+    margin:0;
 }
 .loc-svg {
     padding: 0 .1rem .2rem 0;
